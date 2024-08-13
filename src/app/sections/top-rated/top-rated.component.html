@@ -1,0 +1,37 @@
+
+<div  class="top-rated"  id="top-trainer">
+  <div class="section-title">
+    <h2 class="mt-3">  مدربينا المميزين</h2>
+    <img src="assets/images/top-rated(1).png" alt="">
+    <p>يوجد لدينا نخبة من الأساتذة والمدربين الذين لديهم الكثير نت الخبرة <br>
+      في كل مجال من مجالاتهم </p>
+
+  </div>
+  <div class="container-fluid  position-relative">
+     <div class="row opacity-row gy-2 row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 mb-2  " >
+      <div   class="col my-2 animat " #animat *ngFor="let trainer of trainers ; let i = index" >
+        <div class="profile" [routerLink]="['/trainers', trainer.tid]" *ngIf="i <= 10 ">
+          <div class="image-holder">
+            <img [src]="trainer.image" alt=" ">
+          </div>
+          <h3>{{trainer.name}}</h3>
+          <div class="course-name">
+            <img src="assets/images/vuesax/bold/designtools.png" alt="">
+            <span>مسار {{trainer.role}}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div  [routerLink]="['/tainer']"class="opacity " *ngIf="trainers.length >= 11 ">
+        <h3>عرض أكثر من {{trainers.length}} مدرب من الكفاءات العالية وخبرات متراكمة لدينا في المعهد</h3>
+        <button type="button"> عرض جميع المدربين</button>
+    </div>
+
+
+
+  </div>
+</div>
+
+<!-- [class.flipIn]="inView"  [class.flipOut]="true" -->

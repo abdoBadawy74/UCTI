@@ -1,0 +1,33 @@
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+
+html
+{
+  overflow-x: hidden;
+}
+body
+{
+  direction: rtl;
+
+  font-family: 'Cairo', sans-serif;
+}
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul li {
+    list-style: none;
+
+  }
+  a {
+    text-decoration: none;
+  }
+
+  .ng-image-slider .ng-image-slider-container .main{
+    height: 90px !important;
+  }
+

@@ -1,0 +1,106 @@
+<div class="container-fluid py-4 px-4 ">
+
+    <div class="row rowSpacing  bg-white">
+        <div class="heading d-flex  mb-4">
+            <h5>المسارات التعلمية /  </h5>
+            <h5 class="headingLine mx-2"> مسار {{trainersData.role}} /</h5>
+            <h5 class="mx-2"> {{trainersData.name}} </h5>
+        </div>
+        <div class="col-md-3    pb-3">
+            <div class="trainerProfile p-5  d-flex justify-content-center">
+                <div class="trianerInfo text-center mx-2">
+                    <img [src]="trainersData.image" class="img-fluid" alt="">
+                    <h5 class="pt-2">{{trainersData.name}}</h5>
+                    <p>{{trainersData.description}}</p>
+                </div>
+            </div>
+        </div>
+        <div  class="col-md-8 ">
+
+    <div class="tabs">
+        <ul class="d-flex">
+            <li class="section"  ><a  [class.active]="currentSection === 'section1'" (click)="navigateToSection('section1')"  >الشهادات العلمية</a></li>
+            <li class="section" ><a   [class.active]="currentSection === 'section2'" (click)="navigateToSection('section2')">الإعتمادات</a></li>
+            <li class="section" > <a  [class.active]="currentSection === 'section3'" (click)="navigateToSection('section3')">الخبرات السابقة</a></li>
+            <li class="section" ><a   [class.active]="currentSection === 'section4'" (click)="navigateToSection('section4')">الجهات التي درب معاها سابقا</a></li>
+            <li class="section" ><a   [class.active]="currentSection === 'section5'" (click)="navigateToSection('section5')">الدورات الحالية التي يقدمها المدرب</a></li>
+        </ul>
+    </div>
+    <div   id="section1" *ngIf="currentSection === 'section1'" class="certificates py-3 px-4">
+        <div class="alert alert-danger w-75 m-auto text-center" *ngIf="trainersData.certifications.length <=0 " role="alert">
+            لا يوجد بيانات حاليا.
+          </div>
+        <ul>
+            <li class="py-2" *ngFor="let trainer of trainersData.certifications">
+                <a  href="">{{trainer}} <i class="pi pi-arrow-up-left mx-2"></i></a>
+            </li>
+        </ul>
+    </div>
+    <div id="section2" *ngIf="currentSection === 'section2'" class="certificates py-3 px-4">
+        <div class="alert alert-danger w-75 m-auto text-center" *ngIf="trainersData.cv.length <=0 " role="alert">
+            لا يوجد بيانات حاليا.
+          </div>
+        <ul>
+            <li  class="py-2">
+                <a [attr.href]="trainersData.cv" >CV</a>
+            </li>
+        </ul>
+    </div>
+    <div id="section3" *ngIf="currentSection === 'section3'" class="certificates pt-4 px-4">
+        <div class="alert alert-danger w-75 m-auto text-center" *ngIf="trainersData.experience.length <=0 " role="alert">
+            لا يوجد بيانات حاليا.
+          </div>
+        <ul>
+            <li class="py-2" *ngFor="let trainer of trainersData.experience">
+                <a >{{trainer}} </a>
+            </li>
+
+
+        </ul>
+    </div>
+    <div id="section4" *ngIf="currentSection === 'section4'" class="certificates pt-4 px-4">
+        <div class="alert alert-danger w-75 m-auto text-center" *ngIf="trainersData.previous_training_com.length <=0 " role="alert">
+            لا يوجد بيانات حاليا.
+          </div>
+        <div class="row pt-3">
+            <div class="col-md-3  m-0 p-0" *ngFor="let trainer of trainersData.previous_training_com">
+                <div class="places d-flex ">
+                    <img src="/assets/images/placeicon.svg" class=" img-fluid">
+                    <p class=" pt-1 px-2">{{trainer}}<span class="px-1">(خمس سنين خبرة)</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="section5" *ngIf="currentSection === 'section5'" class="row pt-3 px-2">
+        <!-- <div class="row bg-info"  >/div> -->
+        <div class="alert alert-danger w-75 m-auto text-center" *ngIf="trainersData.items.length <=0 " role="alert">
+            لا يوجد بيانات حاليا.
+          </div>
+        <div *ngFor="let item of trainersData.items ;let i = index" class="col-md-6  trainerContainer px-3 py-3">
+            <div class="row  d-flex   pt-2">
+                <div class="col-md-1 ">
+                    <div class="coursesImage">
+                        <img [src]="item.image" class="img-fluid image" alt="course">
+                    </div>
+                </div>
+                <div class="col-md-5 CourseContainer  offset-md-1    ">
+                    <div class="courseData px-2">
+                        <h5>{{item.title}} </h5>
+                        <div class="d-flex courseTime">
+                            <p> {{daysNum}}يوم . </p>
+                            <p>{{item.hours}} ساعة</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 showDetails  ">
+                    <a [routerLink]="['/courses',item.iid]">عرض التفاصيل</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </div>
+</div>
+

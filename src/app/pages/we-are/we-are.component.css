@@ -1,0 +1,31 @@
+
+.aboutUsContainer .imageContainer img
+{
+    width: 320px;
+}
+
+.aboutUsContainer .aboutUs
+{
+    position: relative;
+    text-align: center;
+}
+.aboutUsContainer .aboutUs h3
+{
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 44px;
+}
+.aboutUsContainer .aboutUs p
+{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 44.98px;
+    padding-top: 15px;
+}
+.aboutUsContainer .aboutUs p .color
+{
+    color: #FF4141
+    ;
+}
+
+

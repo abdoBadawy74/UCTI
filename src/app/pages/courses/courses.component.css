@@ -1,0 +1,296 @@
+.container-fluid
+{
+    background-color: #F8F9F9;
+}
+.rowSpacing
+{
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.heading
+{
+    color: #A5A5A5;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -1.1%;
+}
+.headingLine
+{
+    color: black;
+}
+.trainerProfile
+{
+    background-color:#F8F9F9 ;
+}
+.imagContainer
+{
+    width: 263px;
+    height: 133px;
+    position: relative;
+    border-radius: 8px;
+}
+.imagContainer img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+
+}
+.imagContainer .state
+{
+    width: 56px;
+    height:30px ;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 4px 8px 4px 8px;
+    gap: 10px;
+    text-align:center;
+}
+.imagContainer .state p
+{
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 2%;
+    line-height: 22.49px;
+}
+.trainerProfile a
+{
+    padding: 10px 44px;
+    border-radius: 8px;
+    background-color: #3F64AB   ;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+}
+.tabs
+{
+    width: 100%  !important;
+    margin:0px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.tabs li
+{
+    margin-left: 20px;
+}
+.tabs a
+{
+    font-weight: 500;
+    font-size: 16px;
+    color: gray;
+    line-height: 29.98px;
+}
+a.active 
+{
+    color: #33312C    !important;
+    border-bottom: 1px solid #33312C   
+;}
+.paragContainer
+{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23.1px;
+}
+.goals
+{
+    color: #3F64AB;
+}
+.goals p
+{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26.24px;
+}
+.goals i
+{
+    font-size: 14px;
+
+}
+.coursesImage 
+{
+    background-color: #cbe0fc    ;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+.TimeContainer
+{
+    width: 10%;        
+}
+.TimeData
+{
+    width: 60%;
+}
+.coursesImage i
+{
+    font-size: 20px;
+    color: #3F64AB    ;
+    padding: 10px;
+}
+.coursesImage img
+{
+    padding: 9px;
+}
+.courseData h5
+{
+    color: #33312C;   
+    font-size: 14px;
+    font-weight: 600;    
+    line-height: 23px;
+}
+.courseData p
+{
+    color: #33312C;   
+    font-size: 12px;
+    font-weight: 600;    
+    line-height: 19.8px;
+}
+.googleMaps 
+{
+    height: 100px;
+}
+@media screen and (min-width: 1100px )and (max-width:1240px)
+{
+    .col-md-3
+    {
+        width: 20% !important;
+    }
+    .col-md-3 .imagContainer
+    {
+        width: 203px !important;
+        height: 133px !important;
+    }
+    .col-md-3 a
+    {
+        padding: 10px 32px;
+        font-size: 12px;
+        line-height: 20px;        
+    }
+    .col-md-8
+    {
+        width: 70% !important;   
+        margin-right: 30px !important;
+    }
+   
+    .col-md-8 .goals
+    {
+    width: 40% !important;
+    }
+    .col-md-8 .goals p
+    {
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 767px )and (max-width:1199px)
+{
+ 
+    .col-md-3
+    {
+        width: 15% !important;
+    }
+    .col-md-3 .imagContainer
+    {
+        width: 193px !important;
+        height: 123px !important;
+    }
+    .col-md-3 a
+    {
+        padding: 10px 27px;
+        font-size: 12px;
+        line-height: 20px;        
+    }
+    .col-md-8
+    {
+        width: 75% !important;   
+        margin-right: 70px !important;
+        padding-right: 80px !important;
+    }
+    .col-md-8 .tabs a
+    {
+        font-size: 14px;
+    }
+    .col-md-8 .goals
+    {
+        width: 50% ;
+        }
+    .col-md-8 .goals p
+    {
+        font-size: 10px;
+    }   
+    .col-md-8 .goals i
+    {
+        font-size: 10px;        
+    }
+}
+@media screen and (min-width: 310px )and (max-width:500px)
+{   
+    .heading h5
+    {
+        font-weight: 300;
+        font-size: 13px;
+        letter-spacing: -1.1%;
+    }
+    .imagContainer .state
+    {
+        width: 46px;
+        height:30px ;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background-color: white;
+        border-radius: 4px;
+        padding: 4px 8px 4px 8px;
+    } 
+    .tabs
+    {
+        width: 100%;
+    }
+    .tabs ul
+    {
+        padding: 0px !important;
+        margin-bottom: 10px;
+    }
+    .tabs li
+    {
+        margin: 4px !important;
+        padding-left: 0px !important;
+    }
+    .tabs a
+    {
+        width: 100% !important;
+        font-size: 10px;
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+    .col-md-8 .paragContainer
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .col-md-8 .goals
+    {
+        width: 100% !important;
+    }
+    .col-md-8 .goals p
+    {
+        font-size: 14px;
+    }
+    #map google-map
+    {
+        width: 300px !important;
+    }
+    .TimeData
+    {
+        margin-right: 20px !important;
+    }
+    .TimeData h5
+    {
+        font-size: 13px !important;
+    }
+}

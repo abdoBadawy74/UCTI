@@ -1,0 +1,387 @@
+.container-fluid
+{
+    background-color: #F8F9F9;
+}
+.rowSpacing
+{
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.heading
+{
+    color: #A5A5A5;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -1.1%;
+}
+.headingLine
+{
+    color: black;
+}
+.trainerProfile
+{
+    background-color: #F8F9F9;
+    border-radius: 8px;
+    padding: 20px 12px;
+}
+.trainerProfile img
+{
+    width:80px;
+    height:80px ;
+    border-radius:61.54px ;
+
+}
+.trianerInfo h5
+{
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 2%;
+    line-height: 29.9px;
+    color: #33312C;
+}
+.trianerInfo p
+{
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 2%;
+    line-height: 26.24px;
+    color: gray;
+}
+
+.col-md-8
+{
+    padding: 0px !important;
+    margin: 0px !important;
+    right: 0px;
+}
+.tabs
+{
+    width: 100%  !important;
+    margin:0px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.tabs li
+{
+    margin-right: 20px;
+}
+.tabs a
+{
+    font-weight: 500;
+    font-size: 16px;
+    color: gray;
+    line-height: 29.98px;
+}
+a.active
+{
+    color: #33312C    !important;
+    border-bottom: 1px solid #33312C
+;}
+
+.coursesImage
+{
+    background-color: black;
+    width: 54px;
+    height: 54px;
+    border-radius: 6.75px;
+}
+.courseData
+{
+    margin-right: 17% !important ;
+}
+.courseData h5
+{
+    color: #33312C;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 23px;
+}
+.courseData p
+{
+    color: #33312C;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 19.8px;
+}
+
+.trainerContainer
+{
+    padding-left: 20px !important;
+    padding-right:20px !important;
+}
+.trainerContainer .row
+{
+    border-radius: 8px;
+    border: 1px solid rgb(168, 167, 167);
+    padding-top: 2px;
+}
+
+.certificates ul
+{
+    margin-right: 20px;
+}
+.certificates ul li
+{
+    list-style: square;
+    color: #3F64AB ;
+}
+.certificates ul li a
+{
+    color:#3F64AB;
+    font-weight: 600;
+    font-size: 14px;
+}
+.certificates ul li a i
+{
+    background-color: #FB9C46;
+    color: white;
+    font-size: 12px;
+    padding: 2px;
+    border-radius: 2px;
+}
+.certificates .places
+{
+}
+.certificates .places img
+{
+    width: 28px;
+    height: 28px;
+    margin: 0px !important;
+    padding:0px !important ;
+}
+ .showDetails
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .showDetails a
+{
+    text-decoration: none;
+    color: #AC7FB9    ;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 29.7px;
+    padding: 4px 8px 4px 8px ;
+    border-radius: 8px;
+    border: 1px solid  #AC7FB9;
+    gap: 10;
+}
+.certificates .places p
+{
+    width: 90%;
+    color: #33312C;
+    font-weight: 500;
+    font-size: 14px;
+}
+.certificates .places p span
+{
+    color: #3F64AB    ;
+    font-weight: 400;
+    font-size: 12px;
+    margin-right: 2px !important;
+}
+@media screen and (min-width: 1200px )and (max-width:1280px)
+{
+
+    .rowSpacing .col-md-6 .showDetails a
+    {
+       width: 220px !important;
+       line-height: 24px;
+       gap: 8px !important;
+       padding-right:  14px; ;
+       font-size: 13px;
+       font-weight: 400;
+    }
+    .rowSpacing .col-md-6 .row .col-md-5
+    {
+        padding-right: 3%;
+        width: 40%;
+    }
+}
+@media screen and (min-width: 1100px )and (max-width:1199px)
+{
+
+   .rowSpacing .col-md-3
+    {
+        width: 20% !important;
+        padding:  10px px !important;
+    }
+    .rowSpacing .col-md-3 .trainerProfile
+    {
+        padding: 0px 0px !important;
+        text-align: center;
+    }
+    .rowSpacing .col-md-3 .trainerProfile  .trianerInfo
+    {
+        padding: 20px 20px;
+    }
+    .rowSpacing .col-md-8
+    {
+        width: 70% !important;
+        padding-right: 0px !important;
+        margin-right: 10px !important;
+    }
+    .rowSpacing .col-md-8 .tabs
+    {
+        width: 100% !important;
+    }
+    .rowSpacing .col-md-8 .tabs a
+    {
+        font-size: 13px;
+    }
+}
+@media screen and (min-width: 768px )and (max-width:1099px)
+{
+    .rowSpacing .col-md-3
+    {
+        width: 20% !important;
+        padding:  10px px !important;
+    }
+    .rowSpacing .col-md-3 .trainerProfile
+    {
+        padding: 0px 0px !important;
+        text-align: center;
+    }
+    .rowSpacing .col-md-3 .trainerProfile  .trianerInfo
+    {
+        padding: 20px 20px;
+    }
+    .rowSpacing .col-md-8
+    {
+        width: 75% !important;
+        padding-right: 0px !important;
+        margin-right: 10px !important;
+    }
+    .rowSpacing .col-md-8 .tabs
+    {
+        width: 100% !important;
+    }
+    .rowSpacing .col-md-8 .tabs a
+    {
+        font-size: 13px;
+    }
+    .col-md-6 .row
+    {
+        background-color: white;
+    }
+    .col-md-6 .courseData
+    {
+       width: 100px !important;
+       margin-right: 40% !important;
+       padding: 0px !important;
+       line-height: 20PX;
+    }
+    .col-md-6 .row .col-md-4
+    {
+        width: 30%;
+    }
+    .col-md-6 .courseData h5,p
+    {
+        font-size: 12px;
+    }
+    .col-md-6 .showDetails a
+    {
+       width: 120px !important;
+       line-height: 22px;
+       gap: 8px !important;
+       padding-right:  12px; ;
+       font-size: 12px;
+    }
+}
+@media screen and (min-width: 310px )and (max-width:767px)
+{
+        .heading
+    {
+        color: #A5A5A5;
+        font-weight: 400;
+        letter-spacing: -1.1%;
+    }
+    .heading h5
+    {
+        font-size: 14px !important;
+    }
+     .coursesImage
+    {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+    }
+    .col-md-6 .row
+    {
+        display: flex !important;
+
+    }
+    .col-md-6 .row .col-md-1
+    {
+        width: 13% !important;
+        margin-right: 2px !important;
+    }
+    .CourseContainer
+    {
+        width: 45% !important;
+        padding-right: 5px !important;
+    }
+
+    .courseData
+    {
+        padding-right: 7px !important;
+        padding-top: 5px !important;
+    }
+    .courseData h5
+    {
+        font-size: 12px !important;
+        font-weight: 300;
+        line-height: 10.4px;
+    }
+    .courseTime p
+    {
+        font-size: 12px !important;
+        font-weight: 300;
+        line-height: 10.4px;
+    }
+    .showDetails
+    {
+        width: 35%;
+    }
+     .showDetails a
+    {
+        text-decoration: none;
+        color: #AC7FB9    ;
+        font-size: 12px !important;
+        font-weight: 300 !important;
+        line-height: 20.7px !important;
+        padding: 2px 4px 2px 4px !important ;
+        border-radius: 8px;
+        border: 1px solid  #AC7FB9;
+        gap: 10;
+    }
+    .tabs
+    {
+        width: 100% !important;
+        margin: auto;
+    }
+    .tabs ul
+    {
+
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+    }
+    .tabs li
+    {
+        width: 100%  !important;
+    }
+    .tabs a
+    {
+        width: 100% !important;
+        font-size: 14px;
+    }
+}
+
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+}

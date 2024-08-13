@@ -1,0 +1,97 @@
+<section class="future py-5" [class.paragraph]="true" [class.appear]="inView"><!-- "-->
+  <div class="container-fluid">
+    <div class="row position-relative">
+      <div class="side">
+        <div class="inside"></div>
+      </div>
+
+      <div class="col-md-12 text-center py-3 ">
+        <h4 class="tittle">الرؤية والرسالة</h4>
+      </div>
+      <div class="col-md-6">
+        <div class="vesionMessage">
+          <h5 class="py-2">الرؤية</h5>
+          <p>
+{{view}}
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 ">
+        <div class="vesionMessage">
+          <h5 class="py-2">الرسالة</h5>
+          <p>
+          {{message}}
+          </p>
+        </div>
+      </div>
+      <div class=" col-md-12 py-5  text-center">
+        <div class="goals py-3">
+          <h4 class="py-3">أهدافنا</h4>
+          <h3>نسعي دائما لجعل الشباب مؤهل للسوق الحالي</h3>
+          <p>مع الإلتزام بدورنا كمؤسسة تعليمية عالمية</p>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-md-4  text-center " *ngFor="let item of data">
+          <div class="communicationandEffectiency">
+            <div><img [src]="item.image"></div>
+            <h5 class="my-3">
+              {{item.title}}
+            </h5>
+            <p>
+{{item.description}}
+            </p>
+          </div>
+        </div>
+        <!-- <div class="col-md-4  text-center ">
+                    <div class="communicationandEffectiency">
+                        <div><img src="assets/images/1.svg"></div>
+                        <h5 class="my-3">التميز والجودة</h5>
+                        <p>نسعى دائما لتحقيق أعلى مستويات الجودة في جميع برامجنا التدريبية مع الالتزام بالمعايير العالمية للتميز في التعليم والتدريب.</p>
+                    </div>
+                </div> -->
+        <!-- <div class="col-md-4 text-center">
+                    <div class="communicationandEffectiency">
+                        <div><img src="assets/images/2.svg"></div>
+                        <h5 class="my-3">الابتكار والتطوير </h5>
+                        <p>نحرص على الابتكار المستمر في أساليبنا التدريبية وبرامجنا التعليمية، بما يتماشى مع أحدث التقنيات والممارسات العالمية.</p>
+                    </div>
+                </div>
+                <div class="col-md-4  ">
+                  <div class="communicationandEffectiency text-center" >
+                    <div class="imageConatiner"><img src="assets/images/3.svg"></div>
+                    <h5 class="my-3">التمكين والشمولية </h5>
+                    <p>نعمل على تمكين الأفراد من خلال توفير فرص تدريبية متساوية وشاملة بغض النظر عن خلفياتهم أو تخصصاتهم.</p>
+                </div>
+                </div>
+                <div class="col-md-4  text-center ">
+                    <div class="communicationandEffectiency">
+                        <div><img src="assets/images/4.svg"></div>
+                        <h5 class="my-3">التفاني والالتزام</h5>
+                        <p>نؤمن بأهمية التفاني والالتزام في تقديم خدماتنا التدريبية مما يضمن تحقيق نتائج متميزة ومستدامة لعملائنا.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="communicationandEffectiency">
+                        <div><img src="assets/images/5.svg"></div>
+                        <h5 class="my-3"> أساليب تدريبية</h5>
+                        <p>نستخدم أحدث الأساليب التعليمية والتقنيات
+                            التفاعلية لضمان تجربة تعليمية مبتكرة ومحفزة
+                            مما يساعد المتدربين على تحقيق الاستفادة
+                            القصوى من البرامج.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center ">
+                  <div class="communicationandEffectiency">
+                    <div><img src="assets/images/6.svg"></div>
+                    <h5 class="my-3">دعم مستمر وتوجيه شخصي </h5>
+                    <p>نوفر دعماً مستمراً وتوجيهاً شخصياً لكل متدرب لضمان تحقیق
+                        أقصى استفادة من البرامج التدريبية وتطبيق ما يتم تعلمه في
+                        بيئات العمل الحقيقية.</p>
+                  </div>
+                </div> -->
+
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,60 @@
+<div class="articles px-5">
+  <div class="container">
+  <div class="row">
+    <div class="col-md-12 my-3">
+        <input [(ngModel)]="term" class="form-control m-auto w-50 " type="text" placeholder="بحث" >
+    </div>
+  </div>
+
+    <div class="row gy-2 ">
+      <div *ngFor="let item of NewsData | search:term"  class="col-lg-4 col-md-6 col-sm-12">
+       <a [routerLink]="['/articles-perview',item.nid]">
+        <div class="card" >
+          <div class="card-body">
+            <div class="image-container">
+               <img class="w-100" [src]="item.image"  alt="...">
+            </div>
+
+            <div class="clock">  <i class="fa-regular fa-clock"></i> <span>منذ  {{days}} ايام</span></div>
+            <h2 class="card-title">{{item.title}}</h2>
+            <p class="card-text"> {{item.description}}</p>
+            <div class="readMore">قراءة المزيد..</div>
+
+          </div>
+        </div>
+       </a>
+      </div>
+
+
+
+
+
+
+
+
+
+      <!-- <button class="displyMore" type="button">عرض المزيد</button> -->
+
+
+    </div>
+    <!-- <div class="navclass row w-50 m-auto mt-4   ">
+      <nav aria-label="Page navigation example ">
+        <ul class="pagination text-center">
+          <li class="page-item">
+
+           <img src="../../../assets/images/arrow-right.png" alt="">
+          </li>
+          <li class=""><a  href="#">12</a></li>
+          <li class="page-item"><a  href="#">......</a></li>
+          <li class="page-item"><a  href="#">3</a></li>
+          <li class="page-item"><a  href="#">2</a></li>
+
+          <li class="page-item active"><a  href="#">1</a></li>
+          <li class="page-item">
+            <img src="../../../assets/images/arrow-left.png" alt="">
+          </li>
+        </ul>
+      </nav>
+    </div> -->
+  </div>
+</div>

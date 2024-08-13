@@ -1,0 +1,140 @@
+/* Keyframes for sliding in from the left */
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframes for sliding in from the right */
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply animation to contentContainer divs */
+.contentContainer {
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both; /* Keeps the element in its final state after animation ends */
+    opacity: 1; /* Default opacity */
+}
+
+/* Apply slide-in-left animation to even-indexed elements */
+.contentContainer.animate-left {
+    animation-name: slide-in-left;
+}
+
+/* Apply slide-in-right animation to odd-indexed elements */
+.contentContainer.animate-right {
+    animation-name: slide-in-right;
+}
+.container-fluid
+{
+    padding-left: 4.9%;
+    padding-right: 4.9%;
+}
+.edulines h4
+{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 44px;
+    color: white;
+    background-color: #33312C;
+    padding: 4px, 20px, 4px, 20px;
+    border-radius: 50px;
+    width: 165px;
+    height: 48px;
+    gap: 10;
+    text-align: center;
+}
+.edulines p
+{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+}
+ .coursesImage
+{
+    background-color: black;
+    width: 112px !important;
+    height: 112px !important;
+    border-radius: 23.58px !important;
+}
+.coursesImage img
+{
+    width: 112px !important;
+    height: 112px !important;
+    border-radius: 23.58px !important;
+}
+.content
+{
+    width: 100% !important;
+    margin-left: 10px ;
+    padding: 20px;
+    height: 100% !important;
+    border-radius: 16px;
+    box-shadow: 0px 0px 48px 0px #00000026;
+    ;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 320px) and (max-width:500px)
+{
+    .w-75
+    {
+        padding-right: 25px !important;
+    }
+    .w-75
+    {
+        padding-right: 20px !important;
+    }
+    .coursesImage
+    {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    .coursesImage img
+    {
+        width: 80px !important;
+        height: 80px !important;
+    }
+     
+}
+@media screen and (min-width: 767px) and (max-width:989px)
+{
+    .w-75
+    {
+        padding-right: 20px !important;
+    }
+    .coursesImage
+    {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    .coursesImage img
+    {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    
+}
+@media screen and (min-width: 990px) and (max-width:1200px)
+{
+    .w-75
+    {
+        padding-right: 20px !important;
+    }
+}
+

@@ -1,0 +1,14 @@
+.usage-path  {
+    color:#A5A5A5 ;
+  }
+  .usage-path span {
+    color: black;
+  }
+  
+  .usage-details {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+    color: #888DA2;
+  }
+  

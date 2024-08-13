@@ -1,0 +1,111 @@
+<div class="container-fluid   joinUs ">
+    <div class="row  ">
+        <div class="col-md-7">
+            <div class="d-flex ">
+                <h5>الرئيسية /  </h5>
+                <h5 class="mx-2 text-black" > انضم لنا  </h5>
+            </div>
+            <div class="d-flex py-4 ">
+                <h5 class="text-black detect">انضم لنا كمتدرب</h5>
+                <a routerLink="/asCompany"><h5 class="mx-3 "> انضم لنا كشركة </h5> </a>
+            </div>
+
+
+
+
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit(myForm.value)" #myForm="ngForm">
+
+                <div class="row">
+                    <div class="col-md-6 py-2 ">
+                        <div class="">
+                            <label class="form-label">الإٍسم بالكامل</label> <br>
+
+                            <input ngModel id="name" name="name" type="text" class="form-control" placeholder="اسمك بالكامل" formControlName="name">
+                            <div *ngIf="registerForm.get('name')?.errors && registerForm.get('name')?.touched" class="text-danger">
+                              <small *ngIf="registerForm.get('name')!.errors?.['required']">من فضلك أدخل الاسم</small>
+                              <small *ngIf="registerForm.get('name')!.errors?.['minlength']">يجب أن يحتوي الاسم على الأقل على 5 أحرف</small>
+                              <small *ngIf="registerForm.get('name')!.errors?.['maxlength']">يجب أن يحتوي الاسم على الأقل على 20 حرفًا</small>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 py-2">
+                        <div class="">
+                            <label class="form-label">البريد الإلكتروني</label> <br>
+
+                            <input  ngModel id="email" name="email" type="email" class="form-control" placeholder="بريدك الإلكتروني" formControlName="email">
+                            <div *ngIf="registerForm.get('email')?.errors && registerForm.get('email')?.touched" class="text-danger">
+                              <small *ngIf="registerForm.get('email')?.errors?.['required']">البريد الإلكتروني مطلوب</small>
+                              <small *ngIf="registerForm.get('email')?.errors?.['email']">البريد الإلكتروني غير صحيح</small>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-6  col-sm-12">
+                         <div class=" phoneInput  position-relative  ">
+                            <label class="form-label">رقم جوال</label> <br>
+
+
+                            <input ngModel name="phone" id="phone" id="phone" type="tel" class="form-control"  placeholder="" formControlName="phone">
+                            <div *ngIf="registerForm.get('phone')?.errors && registerForm.get('phone')?.touched" class="text-danger">
+                              <small *ngIf="registerForm.get('phone')?.errors?.['required']">رقم الجوال مطلوب</small>
+                              <small *ngIf="registerForm.get('phone')?.errors?.['pattern']">رقم الجوال غير صحيح</small>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 mt-2 " >
+                        <div class="">
+
+
+                            <label class form-label>اختار المسار التدريبي الذي ترغب بالانضمام له</label>
+                            <select class="form-select" formControlName="route" name="route" ngModel >
+
+
+                              <option value="" disabled selected>المسار التدريبي</option>
+                              <option *ngFor="let option of selectedOption" [value]="option.title"> {{option.title}}</option>
+
+
+                            </select>
+                            <div *ngIf="registerForm.get('route')?.errors != null && registerForm.get('route')?.touched " class="border borer-danger  m-2 w-75">
+                                <small class="text-danger">يجب اختيار أحد المسارات</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <button  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit" class="btn send my-4" [disabled]="!registerForm.valid" >أرسل طلبك</button>
+<!-- Button trigger modal -->
+<!-- <button>
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content content-color ">
+
+      <div class="modal-body mt-5 body-color ">
+    تم ارسال الطلب بنجاح
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+            </form>
+
+        </div>
+    </div>
+</div>
+

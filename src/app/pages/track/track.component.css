@@ -1,0 +1,293 @@
+.container-fluid
+{
+    padding-left: 6%;
+    padding-right: 6%;
+}
+.headingLine
+{
+    color: black !important;
+}
+.trainingLines h5
+{
+    font-size: 16px;
+    font-weight:500 ;
+    color: #8A8A8A    ;
+    line-height: 28px;
+}
+.trainingLines .trainingLinesContainer .trainingLinesBackground
+{
+    position: relative;
+}
+.trainingLines .trainingLinesContainer .trainingLinesBackground img
+{
+
+    height:333px;
+    border-radius: 8px;
+    width: 100% !important;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+.trainingLines .trainingLinesContainer .trainingLinesBackground .trainingLinesOpacity
+{
+    position: absolute;
+    opacity: 70%;
+    width: 98% !important;
+    height: 100%;
+    border-radius: 8px;
+    background-color: #1f1f1f;
+}
+.trackIntro
+{
+    color: #F8F9F9;
+    border-radius: 8px;
+}
+.trackIntro h3
+{
+    font-size: 32px;
+    font-weight:600 ;
+    color: white   ;
+    line-height: 24px;
+    z-index: 999;
+    padding-bottom: 40px !important;
+}
+.trackIntro p
+{
+    font-size: 18px;
+    font-weight:400 ;
+    color: white    ;
+    line-height: 29.7px;
+    padding-bottom: 10px;
+}
+
+.goals p
+{
+    font-weight: 800;
+    font-size:14px ;
+    color: #004AAD    ;
+    line-height: 26.24px ;
+}
+.goals i
+{
+    color: #004AAD ;
+    margin-top: 6px;
+    margin-left: 4px;
+}
+.lineOuts p
+{
+    color: #33312C;
+    font-size: 18px;
+    font-weight: 400;
+}
+.coursesOut .row
+{
+    border-radius: 8px;
+    border: 1px solid rgb(168, 167, 167);
+    padding-top: 5px;
+    margin-right:4px ;
+}
+.coursesOut .coursesImage
+{
+    background-color: black;
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+}
+.coursesOut .coursesImage img
+{
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+}
+.coursesOut .courseData h5
+{
+    color: #33312C;
+    font-size: 18px;
+    font-weight: 600;
+}
+.coursesOut .courseData
+{
+    margin-right: 17% !important ;
+}
+.coursesOut .courseData p
+{
+    color: #33312C;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26.4px;
+}
+.coursesOut .showDetails
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.coursesOut .showDetails a
+{
+    text-decoration: none;
+    color: #AC7FB9    ;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 29.7px;
+    padding: 4px 8px 4px 8px ;
+    border-radius: 8px;
+    border: 1px solid  #AC7FB9;
+    gap: 10;
+}
+.trianerInfo p
+{
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 2%;
+    line-height: 29.9px;
+    color: black;
+}
+
+.lineTrainers p
+{
+    text-align: center;
+    font-weight: 600;
+    font-size:16px ;
+    color: black !important;
+    line-height: 29.28px;
+    letter-spacing: 2%;
+}
+.trainer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.imageContainer
+{
+  border-radius: 61.43px;
+  width:80px !important ;
+  height: 80px !important;
+}
+
+.imageContainer img
+{
+    border-radius: 61.43px;
+    width:80px !important ;
+    height: 80px !important;
+}
+@media screen and (min-width: 768px )and (max-width:1140px)
+{
+
+ .col-md-6 .courseData
+ {
+    width: 150px !important;
+    margin-right: 40% !important;
+    padding: 0px !important;
+    line-height: 20PX;
+}
+.col-md-6 .courseData h5,p
+{
+    font-size: 14px;
+}
+.col-md-6 .showDetails a{
+
+    width: 120px !important;
+    line-height: 22px;
+    gap: 8px !important;
+    padding-right:  12px; ;
+    font-size: 14px;
+
+}
+}
+@media screen and (min-width: 310px )and (max-width:766px)
+{
+
+    .trainingLines .trainingLinesContainer .trainingLinesBackground .trainingLinesOpacity
+    {
+        width: 93% !important;
+    }
+    .trackIntro h3
+    {
+        font-size: 24px;
+        font-weight:600 ;
+        gap: 10 !important;
+        margin-bottom: 0px !important;
+        padding-bottom: 20px !important;
+    }
+    .trackIntro p
+    {
+        margin-top: 0px !important;
+        font-size: 16px;
+        font-weight:400 ;
+        line-height: 25px;
+        padding-bottom: 10px;
+        width: 100% !important;
+        overflow: hidden !important;      /* Hide overflowed content */
+        text-overflow: ellipsis !important; /* Show ellipsis for overflowing text */
+        white-space: normal !important;
+        word-wrap: break-word;   /* Break long words to avoid overflow */
+    }
+    .goals
+    {
+        line-height: 26.24px ;
+    }
+    .coursesOut .coursesImage
+    {
+        background-color: black;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+    }
+    .coursesOut .coursesImage img
+    {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+    }
+    .col-md-6 .row
+    {
+        display: block;
+    }
+    .col-md-6 .row .col-md-1
+    {
+        width: 13%;
+    }
+    .col-md-6 .row .col-md-4
+    {
+        width: 40% !important;
+        padding-right: 0px !important;
+    }
+    .courseData
+    {
+        width: 100%;
+        padding-right: 7px !important;
+        padding-top: 5px !important;
+    }
+    .courseData h5
+    {
+        color: #33312C;
+        font-size: 12px !important;
+        font-weight: 300;
+        line-height: 2.4px;
+    }
+    .courseTime p
+    {
+        font-size: 12px !important;
+        font-weight: 300;
+        line-height: 2.4px;
+    }
+    .coursesOut .showDetails
+    {
+        margin-bottom: 10px;
+    }
+    .coursesOut .showDetails a
+    {
+        text-decoration: none;
+        color: #AC7FB9    ;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 22.7px;
+        padding: 4px 8px 4px 8px ;
+        border-radius: 8px;
+        border: 1px solid  #AC7FB9;
+        gap: 10;
+    }
+}
+/* .image {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 10px;
+} */

@@ -1,0 +1,204 @@
+.student-opinion
+{
+  margin-top: 10px;
+}
+#carouselExampleIndicators
+{
+  position: relative !important;
+  padding: 10px;
+}
+.arrowsbutton
+{
+  display: flex !important;
+  position: relative !important;
+  bottom: 30%;
+}
+.carousel-indicators
+{
+  width: 20% !important;
+  right: 10px !important;
+}
+.carousel-indicators  button
+{
+  background-color: rgba(194, 194, 194, 1) !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+}
+.carousel-control-prev{
+  background-color: rgba(194, 194, 194, 1) !important;
+  position: relative !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 8px;
+  right: 90% !important;
+  bottom: 10px !important;
+}
+.carousel-control-next{
+  background-color: rgba(194, 194, 194, 1) !important;
+  position: relative !important;
+  left: 20px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 8px;
+  right: 70%;
+}
+.bg-info
+{
+  background-color: rgba(63, 100, 171, 1) !important;
+}
+.bg-success
+{
+  background-color: rgba(63, 100, 171, 1) !important;
+}
+.student-opinion {
+  margin: 30px 0 ;
+  padding: 20px;
+}
+.text-content h1 {
+  /* font-size: 36px; */
+  font-weight: 700;
+  font-family: "Cairo";
+
+}
+.text-content h1 span {
+  color: rgba(63, 100, 171, 1);
+}
+.text-content p {
+
+  margin-top: 32px;
+  font-size: 20px;
+  font-weight: 500;
+  color:rgba(138, 138, 138, 1);
+
+}
+
+
+ul {
+  display: flex;
+  align-items: center;
+}
+ul li {
+  margin: 0 5px;
+
+}
+ul li i  {
+color: rgba(250, 173, 19, 1);
+}
+.poinion p {
+  color:rgba(51, 49, 44, 1);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+
+}
+
+.studen-profile {
+  display: flex;
+  align-items: center;
+}
+.student-data {
+  margin-right: 15px;
+}
+.student-data h4 {
+  color: rgba(51, 49, 44, 1);
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 2px;
+}
+
+.student-data p {
+  margin-bottom: 0;
+  font-weight: 500;
+
+}
+
+.silder-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+
+
+}
+
+.controls-arow li {
+background-color: rgba(63, 100, 171, 1);
+padding: 10px 15px;
+border-radius: 12px;
+margin: 0 10px;
+
+}
+.controls-arow li.left {
+  background-color: rgba(194, 194, 194, 1);
+}
+.controls-arow li i {
+  color: white;
+  font-size: 16px;
+}
+
+.points {
+  display: flex;
+  align-items: center;
+
+}
+.points li {
+  padding: 5px;
+  background-color: rgba(226, 236, 244, 1);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.points li.active {
+  background-color: rgba(63, 100, 171, 1);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+.trainer {
+  background-image: url(../../../assets/images/Vector55.png);
+  background-position: center;
+}
+
+@media screen and (min-width:321px) and (max-width: 573px)
+{
+  .carousel-control-prev{
+    position: relative !important;
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 8px;
+    right: 90% !important;
+    bottom: 10px !important;
+  }
+  .carousel-control-next{
+    position: relative !important;
+    left: 20px !important;
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 8px;
+    right: 55%;
+  }
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  width: 20px !important;
+}
+
+
+.bg-success {
+  background-color: #3F64AB !important;
+}
+.Previous :focus {
+  background-color:  #3F64AB !important;
+}
+.carousel-control-next {
+  opacity: 1;
+}
+.control-prev {
+  opacity: 1;
+}
+.carousel-indicators button {
+  background-color:#3F64AB !important ;
+}
+.bg-info {
+  background-color:#3F64AB !important ;
+}
+

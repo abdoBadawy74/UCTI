@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-sm navbar-light" [ngClass]="{'scroll-background': isScrolled}">
+    <div class="container-fluid navedit">
+      <a class="navbar-brand" *ngFor="let data of mainData">
+        <img  [src]="data['logo']" class="img-fluid" alt="القافله العالميه للتدريب">
+        <!-- <img  src="/assets/images/logo.svg" class="img-fluid" alt="القافله العالميه للتدريب"> -->
+      <!-- {{data['logo']}} -->
+      </a>
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav m-auto mt-2 mt-lg-0">
+          <li class="nav-item" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-link">
+            <a class="nav-link" routerLink="" aria-current="page">الرئيسية<span class="visually-hidden">(current)</span></a>
+          </li>
+<!--  (click)="scrollToSection('training-lines')" [class.active]="isActive('training-lines')" -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="training-lines" routerLinkActive="active"> المسارات التدريبية</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="top-trainer" routerLinkActive="active">المدربين </a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLink="student-op" routerLinkActive="active">اراء المدربين </a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="articlesSection" routerLinkActive="active">المقالات </a>
+          </li>
+          <li class="nav-item" routerLinkActive="active-link">
+            <a class="nav-link" routerLink="/joinUs">اتصل بنا </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+  </nav>

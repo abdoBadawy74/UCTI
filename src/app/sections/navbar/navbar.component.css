@@ -1,0 +1,139 @@
+nav
+{
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  z-index: 999999999999999999999999;
+}
+.scroll-background {
+  background-color: white; /* Initial background color */
+}
+.navbar-brand
+{
+  width: 120px;
+  height: 120px;
+}
+.navedit
+{
+  width: 92%  !important;
+}
+.navedit .navbar-nav
+{
+  width: 67%;
+  margin-right: 13% !important;
+  display: flex;
+  justify-content:space-around;
+  padding: 0px 8px;
+}
+.navedit .navbar-nav .nav-item a
+{
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: black;
+  padding-top: 0px ;
+  padding-bottom: 0px;
+  opacity: 40%;
+  cursor: pointer;
+}
+.active-link a
+{
+  color: black;
+  opacity: 100% !important;
+}
+.nav-item.active {
+  color: teal !important;
+  font-weight: bold;
+}
+nav a.active
+{
+  
+  color: black !important;
+  opacity: 100%   !important;
+}
+@media screen and (max-width: 574px)
+{
+  .navbar-brand
+  {
+    width: 100px;
+    height: 100px;
+  }
+  .collapse
+  {
+    width: 100%;
+    background-color: white;
+  }
+  .navedit .navbar-nav
+  {
+     width: 100%;
+    }
+  .navedit .navbar-nav .nav-item a  
+  {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px;
+  }
+}
+@media screen and (min-width: 573px) and (max-width:665px) {
+  .navedit
+{
+  width: 100%  !important;
+}
+
+  .navedit .navbar-nav
+  {
+    margin: 0px !important;
+  }
+  .collapse
+  {
+    width: 100%;
+    margin: 0 !important;
+  }
+  .navedit .navbar-nav
+  {
+     width: 100%;
+     margin: 0px !important;
+    }
+  .navedit .navbar-nav .nav-item a  
+  {
+    font-size: 11px;
+    line-height: 20px;
+  }
+
+
+}
+
+/* Medium screens (tablets) */
+@media screen and (min-width: 666px) and (max-width: 992px) {
+  
+  .collapse
+  {
+  }
+  .navedit .navbar-nav
+  {
+     width: 100%;
+     margin: 0px !important;
+    }
+  .navedit .navbar-nav .nav-item a  
+  {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+}
+
+/* Large screens (desktops) */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .navedit .navbar-nav
+  {
+     width: 80%;
+  }
+
+}
+
+/* Extra large screens (large desktops and above) */
+@media screen and (min-width: 1201px) {
+
+}

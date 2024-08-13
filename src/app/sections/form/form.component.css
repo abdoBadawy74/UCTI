@@ -1,0 +1,146 @@
+@keyframes slideInFromRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideInFromRightAppear {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.paragraph {
+  animation: slideInFromRight 1s ease-out forwards;
+}
+
+.paragraph.appear {
+  animation: slideInFromRightAppear 1s ease-out forwards;
+}
+
+
+
+ .container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  max-width: 1200px;
+  /* 1200 */
+  width: 100%;
+  flex-wrap: wrap;
+  /* margin-right: 96px; */
+
+}
+@media(max-width = 576px) {
+  .container {
+    margin-right:0;
+}
+}
+
+.form-container {
+  background-color: rgba(90, 105, 242, 1);
+  border-radius: 20px;
+  padding: 129px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  flex: 1;
+  position: relative;
+  border-bottom-right-radius: 126px;
+  border-top-right-radius: 74px;
+   width: 20%;
+     flex-wrap: wrap;
+}
+
+.contact-form {
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  /* overflow: hidden; */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+  left: 92px;
+  padding:8px 20px;
+  width: 90%;
+  flex-wrap: wrap;
+
+  /* position: absolute; */
+
+}
+
+.email-input {
+  border: none;
+  padding: 15px;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  border-radius: 10px 0 0 10px;
+}
+
+.submit-button {
+  background-color: #000000 !important;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 0 10px 10px 0;
+}
+
+.text-container {
+  flex: 2;
+  text-align: right;
+  min-width: 50%;
+  /* background-color: red; */
+  margin-bottom: 20px;
+  margin-left: 80px;
+  /* margin-right: -82px; */
+
+}
+
+.text-container h2 {
+
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+  /* width: 60%; */
+  /* line-height: 60; */
+  font-size: 36px;
+  /* font-family: ""; */
+  font-weight: bold;
+  font-family: 'Cairo', sans-serif;
+
+}
+
+.text-container .highlight {
+  color: #5562ea;
+  margin: 0 10px;
+}
+.body-color {
+  color: green !important;
+}
+
+.content-color {
+  background-color: white;
+  margin-top: 100px;
+}
+.text-danger {
+  padding-top: 14px;
+
+}

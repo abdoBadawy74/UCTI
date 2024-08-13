@@ -1,0 +1,63 @@
+.container-fluid
+{
+    padding-right: 4%;
+}
+
+.joinUs h5
+{
+    font-size: 16px;
+    font-weight:500 ;
+    color: #8A8A8A    ;
+    line-height: 28px;
+}
+.joinUs .detect
+{
+    border-bottom: 1px solid black;
+}
+.joinUs label
+{
+    font-size:14px ;
+    font-weight: 500;
+    line-height: 26.24px;
+    color: #33312C    ;
+}
+.phoneInput input
+{
+    max-width: 300px !important;
+}
+.joinUs input
+{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 100% !important;
+}
+.joinUs select
+{
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.joinUs .send
+{
+    width:193px ;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px;
+    padding: 8px 12px 8px 12px;
+    gap: 10px;
+    background-color: #3F64AB    ;
+    color: white;
+}
+.color
+{
+    color:#33312C ;
+    opacity: 50%;
+
+}
+
+.body-color {
+  color: green !important;
+}
+
+.content-color {
+  background-color: white;
+}

@@ -1,0 +1,111 @@
+<div class="container-fluid py-4 px-4 ">
+   
+    <div class="row rowSpacing  bg-white">
+        <div class="heading d-flex  mb-4">
+            <h5>المسارات التعليمية /  </h5>
+            <h5 class="headingLine mx-2"> مسار {{CourseData.eduroute}} /</h5>
+            <h5 class="mx-2 " >{{CourseData.title}} </h5>
+        </div>
+        <div class="col-md-3    d-flex p-2">
+            <div class="trainerProfile p-3 pb-4  ">
+                <div class="imagContainer">
+                    <img [src]="CourseData.image" class="img-fluid" alt="">
+                    <div class="state">
+                        <p>{{CourseData.type}}</p>
+                    </div>
+                </div>
+                <div class="courseData py-2">
+                    <h5>{{CourseData.title}}</h5>
+                    <div class="d-flex courseTime">
+                        <p> {{daysNum}} يوم . </p>
+                        <p> {{CourseData.hours}} ساعة </p>
+                    </div>
+                </div>
+                <a href="" class=""> تواصل معنا للإستفسار <i class="fa-brands fa-whatsapp px-1"></i></a>
+                
+            </div>
+        </div>
+        <div class="col-md-8 pt-1">
+            <div class="tabs ">
+                <ul class="d-flex ">
+                    <li class="section" ><a  [class.active]="currentSection === 'section1'" (click)="navigateToSection('section1')">تفاصيل الدورة</a></li>
+                    <li class="section"><a   [class.active]="currentSection === 'section2'" (click)="navigateToSection('section2')">الأهداف</a></li>
+                    <li class="section"><a  [class.active]="currentSection === 'section3'" (click)="navigateToSection('section3')"> المحاور</a></li>
+                    <li class="section"><a  [class.active]="currentSection === 'section4'" (click)="navigateToSection('section4')">مكان و موعد إقامة الدورة</a></li>
+                </ul>    
+            </div>
+            <div class="paragContainer" id="section1" *ngIf="currentSection === 'section1'">
+                <div class="alert alert-danger w-75 m-auto text-center" *ngIf="CourseData.description.length <=0 " role="alert">
+                    لا يوجد بيانات حاليا.
+                  </div>
+                <p>{{CourseData.description}}</p>
+            </div>
+            <div class="paragContainer" id="section2" *ngIf="currentSection === 'section2'" >
+                <div class="alert alert-danger w-75 m-auto text-center" *ngIf="CourseData.goals.length <=0 " role="alert">
+                    لا يوجد بيانات حاليا.
+                </div>
+                <div class="paragContainer pt-3 d-flex">
+                    <div class="goals d-flex w-25 " *ngFor="let item of CourseData.goals">
+                        <i class="fa-solid fa-circle-check pt-2 "></i>
+                        <p class="px-2">{{item}}</p>    
+                    </div>   
+                </div>
+             
+            </div>
+            <div class="paragContainer" id="section3" *ngIf="currentSection === 'section3'">
+                <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي  القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة  التي يقرأها هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي  القارئ.</p>
+            </div>
+            <div class="paragContainer" id="section4" *ngIf="currentSection === 'section4'">
+                
+                <div class="row ">
+                    <div class="col-md-5  d-flex ">
+                        <div class="TimeContainer ">
+                            <div class="coursesImage">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+                        </div>
+                        <div class="TimeData mx-2">
+                            <div class="courseData px-2">
+                                <h5>{{CourseData.st_day}} _ {{CourseData.end_day}} </h5>
+                                <div class="d-flex courseTime">
+                                    <p> {{extractedTime}} {{timeOfDay}}  </p>
+                                    <p class="px-1"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex ">
+                        <div class="TimeContainer ">
+                            <div class="coursesImage">
+                                <img src="/assets/images/map.svg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="TimeData ">
+                            <div class="courseData px-2">
+                                <h5>{{CourseData.location}} </h5>
+                                <div class="d-flex courseTime">
+                                    <p>{{CourseData.location_details}}</p>
+                                    <p class="px-1"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 " id="map">
+                        <google-map height="400px"
+                            width="750px"
+                            [center]="center"
+                            [zoom]="zoom"
+                            (mapClick)="moveMap($event)"
+                            (mapMousemove)="move($event)">
+                        </google-map>
+
+
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</div>
+
+  

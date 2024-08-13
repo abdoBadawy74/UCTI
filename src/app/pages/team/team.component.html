@@ -1,0 +1,20 @@
+<div class="team mt-5 mb-5">
+  <div class="container">
+    <h6 class="usage-path mb-3">
+      الرئيسية/<span class="me-2">الفريق الإداري</span>
+    </h6>
+    <div class="row m-auto gy-3">
+      <div class="col-lg-4 col-md-6 col-12" *ngFor="let item of teamData">
+        <div class="card border-0">
+          <div class="card-body text-center">
+            <img class="w-100 image" [src]="item.image" />
+            <h5 class="card-title mt-3">
+              {{item.name}}
+            </h5>
+            <p class="job">{{item.role}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

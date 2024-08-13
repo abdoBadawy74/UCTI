@@ -1,0 +1,50 @@
+
+ <div class="container"><!-- [class.paragraph]="true" [class.appear]="inView--> 
+
+
+      <div class="text-container">
+       <h2>
+          <span class="highlight">للتواصل</span>مع المعهد والإستفسار عن أي شيء وكيفية    <span class="highlight">الإلتحاق</span>
+       </h2>
+      </div>
+
+    <div class="form-container">
+
+        <form class="contact-form " [formGroup]="myform" (ngSubmit)="onSubmite(myform.value)"> <!--(ngSubmit)="onSubmit() [(ngModel)]="formData.email"-->
+          <input type="email" placeholder="البريد الإلكتروني" class="email-input"  required="" formControlName="email" name="emial">
+          <div *ngIf="myform.get('email')?.errors && myform.get('email')?.touched" class="text-danger">
+            <small *ngIf="myform.get('email')?.errors?.['required']">البريد الإلكتروني مطلوب</small>
+            <small *ngIf="myform.get('email')?.errors?.['email']">البريد الإلكتروني غير صحيح</small>
+          </div>
+          <button type="submit"   type="button"
+          class="btn btn-primary submit-button"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          type="submit"  [disabled]="!myform.valid">إرسال</button>
+          <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content content-color">
+              <div class="modal-body mt-5 body-color">تم ارسال الطلب بنجاح</div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+       
+    </div>
+
+</div>
