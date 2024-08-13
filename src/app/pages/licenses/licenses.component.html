@@ -17,7 +17,7 @@
               class="d-flex align-items-center justify-content-between px-3 remark py-2"
             >
               <h5 class="card-title mt-3">{{ item.name }}</h5>
-              <i class="fa-solid fa-download"></i>
+              <i class="fa-solid fa-download" (click)="downloadImage(item.image)"></i>
             </div>
           </div>
         </div>

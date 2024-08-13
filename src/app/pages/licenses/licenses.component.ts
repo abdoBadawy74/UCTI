@@ -22,4 +22,17 @@ export class LicensesComponent {
       },
     });
   }
+  downloadImage(imageUrl: string): void {
+    fetch(imageUrl)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = imageUrl.substring(imageUrl.lastIndexOf('/') + 1); // Extract filename from URL
+        link.click();
+        window.URL.revokeObjectURL(url); // Clean up the URL object
+      })
+      .catch((error) => console.error('Download error:', error));
+  }
 }
