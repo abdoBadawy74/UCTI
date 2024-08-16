@@ -1,44 +1,38 @@
-<section class="lines py-5  " id="linesId"    >
-  <div class="container-fluid py-4  ">
-      <div class="row ">
-          <div class="col-md-11 mx-3 ">
-              <div class="edulines">
-                  <h4>المسارات التدريبية</h4>
-                  <p>يمكنك أن تجد مسارك المناسب وتبدأ به الآن.</p>
-              </div>
-          </div>
+<section class="lines py-5" id="linesId">
+  <div class="container-fluid py-4">
+    <div class="row">
+      <div class="col-md-11 mx-3">
+        <div class="edulines">
+          <h4>المسارات التدريبية</h4>
+          <p>يمكنك أن تجد مسارك المناسب وتبدأ به الآن.</p>
+        </div>
       </div>
+    </div>
   </div>
 
-    <div class="container-fluid  traniningLine ">
-        <div class="row d-flex  pt-2">
-            <div class="col-md-6  contentContainer   p-3" *ngFor="let line of eduRoutes ; let i = index"     [routerLink]="['/trainingLines',line.eid]" >
-                <div class=" content d-flex ">
-                    <div class="w-25 ">
-                        <div class="coursesImage">
-                            <img [src]="line.image" class="img-fluid " alt="course">
-                        </div>
-                    </div>
-                    <div class="w-75     ">
-                        <div class="courseData">
-                            <h5>{{line.title}}</h5>
-                            <div class="d-flex courseTime">
-                                <p>{{line.description|seemore}}...</p>
-                            </div>
-                        </div>
-                    </div> 
-        
-                </div>
-            </div>        
-        </div> 
+  <div class="container-fluid traniningLine">
+    <div class="row d-flex pt-2">
+      <div
+        class="col-md-6 contentContainer p-3"
+        *ngFor="let line of eduRoutes; let i = index"
+        [routerLink]="['/trainingLines', line.eid]"
+      >
+        <div class="content d-flex">
+          <div class="w-25">
+            <div class="coursesImage">
+              <img [src]="line.image" class="img-fluid" alt="course" />
+            </div>
+          </div>
+          <div class="w-75">
+            <div class="courseData">
+              <h5>{{ line.title }}</h5>
+              <div class="d-flex courseTime">
+                <p>{{ line.description | seemore }}...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
-
-
-
-
-
-
-
-
-

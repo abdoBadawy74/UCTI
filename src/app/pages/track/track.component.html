@@ -1,81 +1,31 @@
 <div class="container-fluid py-5 trainingLines">
     <div class="row trainingLinesContainer">
-            <div class="col-md-6">
-                <div class="d-flex  py-2">
-                    <h5>المسارات التعلمية /  </h5>
-                    <h5 class="px-2 headingLine">{{eduRoutesData.title}}</h5>
-                </div>
-            </div>
-            <div class="row trainingLinesBackground">
-                <img [src]="eduRoutesData.image" class="img-fluid" [alt]="eduRoutesData.title">
-                <div class="trainingLinesOpacity  " >
-                    <div class="trackIntro ">
-                        <h3 class="py-4">مسار {{eduRoutesData.title}}</h3>
-                        <p>{{eduRoutesData.description}}</p>
-                    </div>
-                </div>
-            </div>
+      <div class="col-md-6">
+        <div class="d-flex py-2">
+          <h5>المسارات التعلمية /</h5>
+          <h5 class="px-2 headingLine">{{ eduRoutesData.title }}</h5>
+        </div>
+      </div>
+      <div class="row trainingLinesBackground">
+        <!-- Image removed -->
+        <div class="trainingLinesOpacity">
+          <div class="trackIntro">
+            <h3 class="py-4 fw-bold"  style="color: #004AAD;">مسار {{ eduRoutesData.title }}</h3>
+            <p class="text-dark">{{ eduRoutesData.description }}</p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="row py-4"> <!--Goals -->
-        <h4 class="pb-3" >دورات المسار</h4>
-        <div *ngFor="let item of eduRoutesData.goals" class="col-md-3 px-2  my-2  ">
-            <div class="goals d-flex">
-                <i class="fa-solid fa-circle-check"></i>
-                <p>{{item}}</p>
-            </div>
+  
+    <div class="row py-4">
+      <!-- Goals -->
+      <h4 class="pb-3">دورات المسار</h4>
+      <div *ngFor="let item of eduRoutesData.goals" class="col-md-3 px-2 my-2">
+        <div class="goals d-flex">
+          <i class="fa-solid fa-circle-check"></i>
+          <p>{{ item }}</p>
         </div>
-
-
+      </div>
     </div>
-
-   <!-- <div class="row">  OutPuts 
-        <div class="lineOuts" >
-            <h4 >مخرجات المسار</h4>
-            <div class="d-flex">
-                <p *ngFor="let item of eduRoutesData.outputs " class="mx-3 my-2" >{{item}}</p>
-            </div>
-        </div>
-    </div>-->
-
-   <!-- <div class="row  py-5 "  >  Courses
-        <h4 class="py-2">دورات المسار</h4>
-        <div *ngFor="let item of eduRoutesData.items" class=" col-md-6 col-xs-12 col-sm-12  coursesOut mb-3 ">
-            <div class="row d-flex  pt-2">
-                <div class="col-md-1 ">
-                    <div class="coursesImage">
-                        <img [src]="item.image" class="img-fluid " alt="course">
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4  offset-md-3    ">
-                    <div class="courseData">
-                        <h5>{{item.title}}</h5>
-                        <div class="d-flex courseTime">
-                            <p>{{daysNum}} يوم . </p>
-                            <p>{{item.hours}} ساعة</p>
-                        </div>
-                    </div>
-                </div>
-                <div class=" col-xs-12 col-md-4  showDetails  ">
-                    <a [routerLink]="['/courses',item.iid]">عرض التفاصيل</a>
-                </div>
-            </div>
-        </div>
-
-    </div>-->
-
-    <!-- <div class="row py-3 trainer-lines-row">  Trainers
-        <h4>مدربين المسار</h4>
-        <div class="col-md-6 d-flex py-2  trainer-container">
-            <a class="text-center d-flex justify-content-center  " *ngFor="let trainer of eduRoutesData.trainers"  class="trianerInfo mx-2" [routerLink]="['/trainers', trainer.tid]">
-               <div class="lineTrainers " >
-                    <div class="imageContainer text-center  ">
-                        <img [src]="trainer.image" alt="trainer-image" class="img-fluid">
-                    </div>
-                    <p class="">{{trainer.name}}</p>
-               </div>
-            </a>
-
-        </div>
-    </div> -->
-</div>
+  </div>
+  
