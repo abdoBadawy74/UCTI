@@ -1,33 +1,52 @@
-<header class="pt-5 " [@fadeInHeader]>
-  <div class="container-fluid  x mt-5 py-5 ">
+<header class="pt-5" [@fadeInHeader]>
+  <div class="container-fluid x mt-5 py-5">
     <div class="row">
-      <div class="col-md-8 py-5 ">
+      <div class="col-md-8 py-5">
         <div class="contentSpecial">
           <h5>تريد أخذ مسار جديد في حياتك المهنية</h5>
-          <!-- <h1><span class="remark">استعد</span> للتميز : قم بتطوير نفسك من خلال  <span class="remark">التعلم !</span></h1> -->
-          <h1> <span class="remark">{{firstWord}}</span>
-            <span>{{middleText}}</span>
-            <span class="remark">{{lastTwoWords}}</span>
+
+          <h1>
+            <span class="remark">{{ firstWord }}</span>
+            <span>{{ "  " }} </span>
+            <span>{{ middleText }}</span>
+            <span>{{ "  " }} </span>
+            <span class="remark">{{ lastTwoWords }}</span>
           </h1>
           <p>
-             {{hero_details}}
+            {{ hero_details }}
           </p>
           <div class="contact">
             <p>تواصل معنا</p>
             <div class="contactUs">
-              <div *ngIf="facebook"><a [href]="facebook" target="_blank"><i class="fab fa-facebook"></i></a></div>
-              <div *ngIf="insta"><a [href]="insta" target="_blank"><i class="pi pi-instagram"></i></a></div>
-              <div *ngIf="youtube"><a [href]="youtube" target="_blank"><i class="pi pi-youtube"></i></a></div>
-              <div *ngIf="twitter"><a [href]="twitter" target="_blank"><i class="pi pi-twitter"></i></a></div>
+              <div *ngIf="facebook">
+                <a [href]="facebook" target="_blank"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </div>
+              <div *ngIf="insta">
+                <a [href]="insta" target="_blank"
+                  ><i class="pi pi-instagram"></i
+                ></a>
+              </div>
+              <div *ngIf="youtube">
+                <a [href]="youtube" target="_blank"
+                  ><i class="pi pi-youtube"></i
+                ></a>
+              </div>
+              <div *ngIf="twitter">
+                <a [href]="twitter" target="_blank"
+                  ><i class="pi pi-twitter"></i
+                ></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-4 ">
+      <div class="col-md-4">
         <div class="cover position-relative">
           <div class="img-cont">
             <!-- <img src="assets/images/review.jpeg" class="img-fluid" alt="استعد للتميز"> -->
-            <img [src]="hero" class="img-fluid" alt="استعد للتميز">
+            <img [src]="hero" class="img-fluid" alt="استعد للتميز" />
           </div>
         </div>
       </div>

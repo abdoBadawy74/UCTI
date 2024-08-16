@@ -59,35 +59,38 @@ export interface ApiResponse {
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
-  styleUrls: ['./article.component.css']
+  styleUrls: ['./article.component.css'],
 })
 export class ArticleComponent {
   inView: boolean = false;
-  constructor(private elementRef: ElementRef,private _DataService:DataService) {}
+  constructor(
+    private elementRef: ElementRef,
+    private _DataService: DataService
+  ) {}
 
-    @HostListener('window:scroll', ['$event'])
-    checkScroll() {
-      const componentTop = this.elementRef.nativeElement.getBoundingClientRect().top;
-      const viewportHeight = window.innerHeight;
-      this.inView = componentTop <= viewportHeight - 100; // Adjust threshold as needed
-    }
-    ngOnInit(): void {
-      //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-      //Add 'implements OnInit' to the class.
-      this.getMainData();
-    }
-name:string="";
-description="";
-    getMainData() {
-      this._DataService.getMainData().subscribe({
-        next: (res: ApiResponse) => {
-          this.name = res?.data[0]?.name || '';
-          this.description = res?.data[0]?.description || '';
-
-        },
-        error: (err) => {
-          console.log("errrrrrror", err);
-        }
-      })
-    }
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const componentTop =
+      this.elementRef.nativeElement.getBoundingClientRect().top;
+    const viewportHeight = window.innerHeight;
+    this.inView = componentTop <= viewportHeight - 100; // Adjust threshold as needed
+  }
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.getMainData();
+  }
+  name: string = '';
+  description = '';
+  getMainData() {
+    this._DataService.getMainData().subscribe({
+      next: (res: ApiResponse) => {
+        this.name = res?.data[0]?.name || '';
+        this.description = res?.data[0]?.description || '';
+      },
+      error: (err) => {
+        console.log('errrrrrror', err);
+      },
+    });
+  }
 }

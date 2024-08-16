@@ -95,6 +95,7 @@ export class HeaderComponent implements OnInit {
         this.youtube = res?.data[0]?.youtube || '';
         this.twitter = res?.data[0]?.twitter || '';
         this.splitHeroTitle();
+        console.log(res?.data[0]?.hero_title);
       },
       error: (err) => {
         console.log("errrrrrror", err);
@@ -104,15 +105,11 @@ export class HeaderComponent implements OnInit {
 
   splitHeroTitle() {
     const words = this.hero_title.split(' ');
-    if (words.length >= 3) {
-      this.firstWord = words[0];
-      this.middleText = words.slice(1, -1).join(' ');
-    } else if (words.length === 2) {
-      this.firstWord = words[0];
-      this.lastTwoWords = words[1];
-    } else {
-      this.firstWord = this.hero_title;
-    }
+    console.log(words);
+    this.firstWord = words.slice(0, 1).join(' ');
+    this.middleText = words.slice(1, 2).join(' ');
+    this.lastTwoWords = words.slice(2).join(' ');
+    
   }
 
   ngOnInit(): void {
