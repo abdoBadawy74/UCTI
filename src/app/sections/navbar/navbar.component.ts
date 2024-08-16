@@ -1,5 +1,10 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, HostListener, OnInit, AfterViewChecked } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  OnInit,
+  AfterViewChecked,
+} from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { DataService } from 'src/app/data.service';
 
@@ -61,15 +66,15 @@ export interface ApiResponse {
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit, AfterViewChecked {
   isScrolled: boolean = false;
   isExpanded: boolean | undefined;
-  logo: string = "";
+  logo: string = '';
 
   constructor(private router: Router, private _DataService: DataService) {
-    this.router.events.subscribe(event => {
+    this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         const fragment = this.router.url.split('#')[1];
         if (fragment) {
@@ -96,20 +101,16 @@ export class NavbarComponent implements OnInit, AfterViewChecked {
     }
     return false;
   }
-  mainData:any;
+  mainData: any;
   getMainData() {
     this._DataService.getMainData().subscribe({
       next: (res: ApiResponse) => {
         this.mainData = res.data;
-        console.log(this.mainData);
-
-
-
       },
       error: (err) => {
-        console.log("Error", err);
-        alert("errrrrrrr1")
-      }
+        console.log('Error', err);
+        alert('errrrrrrr1');
+      },
     });
   }
 

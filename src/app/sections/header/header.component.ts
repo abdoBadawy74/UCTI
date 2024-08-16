@@ -65,25 +65,27 @@ export interface ApiResponse {
     trigger('fadeInHeader', [
       transition(':enter', [
         style({ transform: 'scale(0.5)', opacity: 0 }),
-        animate('3s cubic-bezier(0.35, 0, 0.25, 1)', style({ transform: 'scale(1)', opacity: 1 }))
-      ])
-    ])
-  ]
+        animate(
+          '3s cubic-bezier(0.35, 0, 0.25, 1)',
+          style({ transform: 'scale(1)', opacity: 1 })
+        ),
+      ]),
+    ]),
+  ],
 })
 export class HeaderComponent implements OnInit {
-
   constructor(private _DataService: DataService) {}
   mainData: any;
-  hero_title: string = "";
+  hero_title: string = '';
   firstWord: string = '';
   middleText: string = '';
   lastTwoWords: string = '';
-  hero_details:string="";
-  hero="";
-  facebook:string="";
-  insta="";
-  youtube="";
-  twitter="";
+  hero_details: string = '';
+  hero = '';
+  facebook: string = '';
+  insta = '';
+  youtube = '';
+  twitter = '';
   getMainData() {
     this._DataService.getMainData().subscribe({
       next: (res: ApiResponse) => {
@@ -95,21 +97,19 @@ export class HeaderComponent implements OnInit {
         this.youtube = res?.data[0]?.youtube || '';
         this.twitter = res?.data[0]?.twitter || '';
         this.splitHeroTitle();
-        console.log(res?.data[0]?.hero_title);
       },
       error: (err) => {
-        console.log("errrrrrror", err);
-      }
-    })
+        console.log('errrrrrror', err);
+      },
+    });
   }
 
   splitHeroTitle() {
     const words = this.hero_title.split(' ');
-    console.log(words);
+
     this.firstWord = words.slice(0, 1).join(' ');
     this.middleText = words.slice(1, 2).join(' ');
     this.lastTwoWords = words.slice(2).join(' ');
-    
   }
 
   ngOnInit(): void {

@@ -1,20 +1,23 @@
-
 import { DataService } from 'src/app/data.service';
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { animate, state, style, transition, trigger } from '@angular/animations';
-
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-student-opinion',
   templateUrl: './student-opinion.component.html',
-  styleUrls: ['./student-opinion.component.css'], 
+  styleUrls: ['./student-opinion.component.css'],
 })
 export class StudentOpinionComponent {
-
-  DataOPenion:any=[];
-  rates:any = [0,1,2,3,4];
-  rate!:number  ;
-  finalRateArray:any=[]
+  DataOPenion: any = [];
+  rates: any = [0, 1, 2, 3, 4];
+  rate!: number;
+  finalRateArray: any = [];
   inView: boolean = false;
   isPrevActive = false;
   isNextActive = false;
@@ -35,30 +38,28 @@ export class StudentOpinionComponent {
     this.activeSlide = event.to; // Update activeSlide with the index of the newly active slide
   }
 
+  constructor(
+    private _DataService: DataService,
+    private elementRef: ElementRef
+  ) {
+    _DataService.getOpenionData().subscribe((res) => {
+      this.DataOPenion = res.data;
+      let finalRate = this.rates.slice(this.rate);
+      this.finalRateArray = finalRate;
 
-  constructor(private _DataService:DataService,private elementRef: ElementRef) {
-   _DataService.getOpenionData().subscribe((res)=>{
-    this.DataOPenion = res.data;
-  let finalRate= this.rates.slice(this.rate);
-  this.finalRateArray = finalRate;
-
-
-
-  for(let i of this.DataOPenion ) {
-    let rate1 = i.rate;
-    this.rate = rate1;
-    console.log(i.rate);
-
-  }
-   })
+      for (let i of this.DataOPenion) {
+        let rate1 = i.rate;
+        this.rate = rate1;
+      }
+    });
   }
   getRange(num: number): number[] {
-    return Array(num).fill(0).map((x, i) => i);
+    return Array(num)
+      .fill(0)
+      .map((x, i) => i);
   }
 
-
   private lastScrollTop = 0; // Track the last scroll position
-
 
   ngOnInit() {
     this.checkScroll(); // Initial check
@@ -70,9 +71,12 @@ export class StudentOpinionComponent {
   }
 
   checkScroll() {
-    const elements = this.elementRef.nativeElement.querySelectorAll('.animate-from-right, .animate-from-left');
+    const elements = this.elementRef.nativeElement.querySelectorAll(
+      '.animate-from-right, .animate-from-left'
+    );
     const viewportHeight = window.innerHeight;
-    const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const currentScrollTop =
+      window.pageYOffset || document.documentElement.scrollTop;
 
     elements.forEach((el: HTMLElement) => {
       const rect = el.getBoundingClientRect();
@@ -93,9 +97,4 @@ export class StudentOpinionComponent {
 
     this.lastScrollTop = currentScrollTop; // Update the last scroll position
   }
-
-
-
-
- 
 }

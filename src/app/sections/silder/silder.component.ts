@@ -32,7 +32,7 @@ getClients() {
       // Trigger change detection
       this.cdr.detectChanges();
 
-      console.log(this.data);
+      
     },
     error: (err) => {
       console.error('Failed to fetch data', err);
