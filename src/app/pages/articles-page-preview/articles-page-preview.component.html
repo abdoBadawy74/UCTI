@@ -1,56 +1,66 @@
 <div class="article_perview">
-
-
   <div class="container">
     <div class="row">
-      <div class=" col-12 mb-3">
+      <div class="col-12 mb-3">
         <div class="path">
-          <p> <span>  المقالات/  </span>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء</p>
+          <p><span> المقالات/ </span>{{ articles?.title }}</p>
         </div>
-
       </div>
     </div>
     <div class="row">
       <div class="col-12">
         <div class="card">
           <div class="image-container">
-            <img [src]="articles.image" alt="perview-image.png"  >
+            <img [src]="articles?.image" alt="perview-image.png" />
           </div>
 
           <div class="row">
             <div class="col-lg-9">
-              <div class="clock mb-3">  <i class="fa-regular fa-clock ms-2"></i>منذ{{days}} ايام <span></span></div>
-              <h2 class="card-title mt-3 mb-3">{{articles.title}}</h2>
-            <p class="card-text">{{articles.description}}</p>
+              <div class="clock mb-3">
+                <i class="fa-regular fa-clock ms-2"></i>منذ {{ days }} ايام
+                <span></span>
+              </div>
+              <h2 class="card-title mt-3 mb-3">{{ articles?.title }}</h2>
+              <p class="card-text">{{ articles?.description }}</p>
             </div>
 
-            <div class="col-lg-3 ">
+            <div class="col-lg-3">
               <h1 class="more-title">المزيد من المقالات</h1>
-              <div class="card " >
+              <div class="card">
                 <div class="card-body">
-                  <img class="w-100 image-width" [src]="moreArticles[0].image"  alt="...">
-                  <div class="clock mt-2 mb-2">  <i class="fa-regular fa-clock ms-2"></i> <span>منذ  {{days}} ايام  </span></div>
-                  <h2 class="card-title-left">{{moreArticles[0].title}}</h2>
-                  <!-- <p class="card-text">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي  القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة  التي يقرأها.</p> -->
-
-
+                  <img
+                    class="w-100 image-width"
+                    [src]="moreArticles[0]?.image"
+                    alt="..."
+                  />
+                  <div class="clock mt-2 mb-2">
+                    <i class="fa-regular fa-clock ms-2"></i>
+                    <span>منذ {{ days }} ايام </span>
+                  </div>
+                  <h2 class="card-title-left">{{ moreArticles[0]?.title }}</h2>
                 </div>
               </div>
-              <div class="card" >
-                <div class="card-body">
-                  <img class="w-100 image-width" [src]="moreArticles[1].image"  alt="...">
-                  <div class="clock mt-2 mb-2">  <i class="fa-regular fa-clock ms-2"></i> <span>منذ  {{days}} ايام</span></div>
-                  <h2 class="card-title-left">{{moreArticles[0].title}}</h2>
-                  <!-- <p class="card-text">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي  القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة  التي يقرأها.</p> -->
-
-
+              <!-- Conditionally render the second card -->
+              <div *ngIf="moreArticles[1]">
+                <div class="card">
+                  <div class="card-body">
+                    <img
+                      class="w-100 image-width"
+                      [src]="moreArticles[1]?.image"
+                      alt="..."
+                    />
+                    <div class="clock mt-2 mb-2">
+                      <i class="fa-regular fa-clock ms-2"></i>
+                      <span>منذ {{ days }} ايام</span>
+                    </div>
+                    <h2 class="card-title-left">
+                      {{ moreArticles[1]?.title }}
+                    </h2>
+                  </div>
                 </div>
               </div>
-
             </div>
           </div>
-
-
         </div>
       </div>
     </div>

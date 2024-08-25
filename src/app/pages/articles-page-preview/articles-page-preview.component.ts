@@ -28,7 +28,7 @@ export class ArticlesPagePreviewComponent implements OnInit {
       let time = new Date(this.articles.date);
       console.log(this.articles.date);
 
-
+console.log(this.moreArticles);
 
       let dateString = time;
 
