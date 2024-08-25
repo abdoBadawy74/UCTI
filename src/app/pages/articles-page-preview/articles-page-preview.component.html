@@ -21,7 +21,8 @@
                 <span></span>
               </div>
               <h2 class="card-title mt-3 mb-3">{{ articles?.title }}</h2>
-              <p class="card-text">{{ articles?.description }}</p>
+              <!-- Render the sanitized HTML content -->
+              <p class="card-text" [innerHTML]="articles?.description"></p>
             </div>
 
             <div class="col-lg-3">
