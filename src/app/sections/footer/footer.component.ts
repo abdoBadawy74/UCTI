@@ -1,18 +1,21 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent {
-  constructor(private _DataService:DataService){}
-  mainData:any;
-  facebook:string="";
-  insta="";
-  youtube="";
-  twitter="";
+  mainData: any;
+  facebook: string = '';
+  insta: string = '';
+  youtube: string = '';
+  twitter: string = '';
+
+  constructor(private _DataService: DataService, private router: Router) {}
+
   getMainData() {
     this._DataService.getMainData().subscribe({
       next: (res: any) => {
@@ -21,18 +24,19 @@ export class FooterComponent {
         this.insta = res?.data[0]?.insta || '';
         this.youtube = res?.data[0]?.youtube || '';
         this.twitter = res?.data[0]?.twitter || '';
-
-
       },
       error: (err) => {
-        console.log("Error", err);
-        alert("errrrrrrr1")
-      }
+        console.error('Error', err);
+        alert('Error fetching main data');
+      },
     });
   }
+
+  navigateToSection() {
+    this.router.navigate(['/home'], { fragment: 'article' });
+  }
+
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
     this.getMainData();
   }
 }

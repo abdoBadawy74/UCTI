@@ -1,38 +1,23 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { AfterViewInit, Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { ScrollService } from 'src/app/scroll.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent  {
-//   constructor(private route: ActivatedRoute,private router:Router) {}
+export class HomeComponent {
+  @ViewChild('weAreSection') weAreSection!: ElementRef;
 
-//   ngOnInit(): void {
-//     this.route.fragment.subscribe(fragment => {
-//       if (fragment) {
-//         this.scrollToSection(fragment);
-//       }
-//     });
-//   }
+  constructor(private scrollService: ScrollService) {
+    this.scrollService.scrollToSection$.subscribe(() => {
+      this.scrollToWeAreSection();
+    });
+  }
 
-//   ngAfterViewInit(): void {
-//     this.route.fragment.subscribe(fragment => {
-//       if (fragment) {
-//         this.scrollToSection(fragment);
-//       }
-//     });
-//   }
-
-//   private scrollToSection(sectionId: string) {
-//     if (this.router.url !== '/') {
-//         this.router.navigate(['/'], { fragment: sectionId });
-//     } else {
-//         const section = document.getElementById(sectionId);
-//         if (section) {
-//             section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-//         }
-//     }
-// }
+  scrollToWeAreSection() {
+    if (this.weAreSection) {
+      this.weAreSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

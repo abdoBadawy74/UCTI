@@ -68,6 +68,7 @@ export class ArticleComponent {
     private _DataService: DataService
   ) {}
 
+
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
     const componentTop =

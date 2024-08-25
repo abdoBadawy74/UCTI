@@ -17,6 +17,7 @@ import { ArticlesPagePreviewComponent } from './pages/articles-page-preview/arti
 import { TrainingLinesComponent } from './sections/training-lines/training-lines.component';
 import { TopRatedComponent } from './sections/top-rated/top-rated.component';
 import { ArticlesComponent } from './sections/articles/articles.component';
+import { ArticleComponent } from './sections/article/article.component';
 import { AppComponent } from './app.component';
 import { StudentOpinionComponent } from './sections/student-opinion/student-opinion.component';
 import { TrainerPageComponent } from './pages/trainer-page/trainer-page.component';
@@ -117,6 +118,10 @@ const routes: Routes = [
     component:ArticlesComponent
   },
   {
+    path:'article',
+    component:ArticleComponent
+  },
+  {
     path:'tainer',
     component:TrainerPageComponent
   },
@@ -152,7 +157,8 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, {
     enableTracing:false,
     scrollPositionRestoration:"enabled",
-    anchorScrolling:"enabled"
+    anchorScrolling:"enabled",
+    scrollOffset:[0, 64],
   })
 
   ],
