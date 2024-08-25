@@ -17,6 +17,7 @@ export class TrainerPageComponent {
   ) {
     this._DataService.getTrainersData().subscribe((info) => {
       this.trainers = info.data;
+      console.log(info);
     });
   }
 }
