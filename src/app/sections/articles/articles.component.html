@@ -1,33 +1,39 @@
-<div class="articles " id="articles1">
-
+<div class="articles" id="articles1">
   <div class="container">
-  <h1 class="article-header" *ngIf="NewsData.length>0">أحدث المقالات</h1>
+    <h1 class="article-header" *ngIf="NewsData.length > 0">أحدث المقالات</h1>
 
     <div class="row">
-
-      <div class="col-lg-4 col-md-6 col-sm-12 gy-4" *ngFor="let item of NewsData ; let i = index"  >
-        <a [routerLink]="['/articles-perview',item.nid]" *ngIf="i <= 4 ">
-          <div class="card" >
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 gy-4"
+        *ngFor="let item of NewsData; let i = index"
+      >
+        <a [routerLink]="['/articles-perview', item.nid]" *ngIf="i <= 4">
+          <div class="card">
             <div class="card-body">
               <div class="image-container">
-                <img class="img-fluid" [src]="item.image"  alt="...">
+                <img class="img-fluid" [src]="item.image" alt="..." />
               </div>
-              <div class="clock">  <i class="fa-regular fa-clock"></i> <span> منذ{{days}} ايام  </span></div>
-              <h2 class="card-title">{{item.title}}</h2>
-              <p class="card-text"> {{item.description |seemore}}</p>
-              <div class="readMore" >قراءة المزيد..</div>
-
+              <div class="clock">
+                <i class="fa-regular fa-clock"></i>
+                <span> منذ {{ item.days }} ايام </span>
+                <!-- Display the calculated days for each article -->
+              </div>
+              <h2 class="card-title">{{ item.title }}</h2>
+              <p class="card-text" [innerHTML]="item.description | seemore"></p>
+              <div class="readMore">قراءة المزيد..</div>
             </div>
           </div>
         </a>
-
       </div>
 
-
-
-      <button *ngIf="NewsData.length >=4 " class="displyMore" type="button" [routerLink]="['/articles']">عرض المزيد</button>
-
-
+      <button
+        *ngIf="NewsData.length >= 4"
+        class="displyMore"
+        type="button"
+        [routerLink]="['/articles']"
+      >
+        عرض المزيد
+      </button>
     </div>
   </div>
 </div>

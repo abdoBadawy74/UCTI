@@ -106,6 +106,7 @@ export class NavbarComponent implements OnInit, AfterViewChecked {
     this._DataService.getMainData().subscribe({
       next: (res: ApiResponse) => {
         this.mainData = res.data;
+        console.log(this.mainData);
       },
       error: (err) => {
         console.log('Error', err);

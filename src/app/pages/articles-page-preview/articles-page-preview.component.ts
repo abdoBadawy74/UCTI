@@ -18,6 +18,8 @@ export class ArticlesPagePreviewComponent implements OnInit, OnDestroy {
   days!: number;
   private routeSub!: Subscription; // Subscription for route parameters
 
+  
+
   constructor(
     private _ActivatedRoute: ActivatedRoute,
     private _DataService: DataService,
@@ -56,6 +58,7 @@ export class ArticlesPagePreviewComponent implements OnInit, OnDestroy {
         currentDate.getTime() - articleDate.getTime();
       const millisecondsPerDay = 1000 * 60 * 60 * 24;
       this.days = Math.floor(differenceInMilliseconds / millisecondsPerDay);
+      console.log(this.days);
     });
   }
 
