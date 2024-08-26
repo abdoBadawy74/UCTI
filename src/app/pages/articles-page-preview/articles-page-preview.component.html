@@ -40,7 +40,8 @@
                     />
                     <div class="clock mt-2 mb-2">
                       <i class="fa-regular fa-clock ms-2"></i>
-                      <span>منذ {{ days }} ايام </span>
+                      <span>منذ {{ moreArticles[0]?.days }} ايام </span>
+                      <!-- Bind the days for each more article -->
                     </div>
                     <h2 class="card-title-left">
                       {{ moreArticles[0]?.title }}
@@ -63,7 +64,8 @@
                       />
                       <div class="clock mt-2 mb-2">
                         <i class="fa-regular fa-clock ms-2"></i>
-                        <span>منذ {{ days }} ايام</span>
+                        <span>منذ {{ moreArticles[1]?.days }} ايام</span>
+                        <!-- Bind the days for the second more article -->
                       </div>
                       <h2 class="card-title-left">
                         {{ moreArticles[1]?.title }}

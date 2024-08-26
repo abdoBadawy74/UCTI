@@ -18,8 +18,6 @@ export class ArticlesPagePreviewComponent implements OnInit, OnDestroy {
   days!: number;
   private routeSub!: Subscription; // Subscription for route parameters
 
-  
-
   constructor(
     private _ActivatedRoute: ActivatedRoute,
     private _DataService: DataService,
@@ -47,19 +45,31 @@ export class ArticlesPagePreviewComponent implements OnInit, OnDestroy {
       // Sanitize the description HTML
       this.articles.description = this.sanitizeHtml(this.articles.description);
 
-      // Assign the more articles data
-      this.moreArticles = response['More Articles'] || []; // Ensure it's an array
-      console.log(this.moreArticles);
+      // Calculate the number of days since the main article's date
+      this.days = this.calculateDaysDifference(this.articles.date);
 
-      // Calculate the number of days since the article's date
-      const articleDate = new Date(this.articles.date);
-      const currentDate = new Date();
-      const differenceInMilliseconds =
-        currentDate.getTime() - articleDate.getTime();
-      const millisecondsPerDay = 1000 * 60 * 60 * 24;
-      this.days = Math.floor(differenceInMilliseconds / millisecondsPerDay);
-      console.log(this.days);
+      // Assign the more articles data and calculate days for each
+      this.moreArticles = response['More Articles'] || []; // Ensure it's an array
+      this.moreArticles.forEach((article) => {
+        article.days = this.calculateDaysDifference(article.date);
+      });
+
+      console.log(this.moreArticles); // Log to check the data
     });
+  }
+
+  /**
+   * Calculates the difference in days between the given date and the current date.
+   * @param date The date to compare with the current date.
+   * @returns The number of days difference.
+   */
+  calculateDaysDifference(date: string): number {
+    const articleDate = new Date(date);
+    const currentDate = new Date();
+    const differenceInMilliseconds =
+      currentDate.getTime() - articleDate.getTime();
+    const millisecondsPerDay = 1000 * 60 * 60 * 24;
+    return Math.floor(differenceInMilliseconds / millisecondsPerDay);
   }
 
   /**
